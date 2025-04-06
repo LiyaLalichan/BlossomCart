@@ -1,4 +1,4 @@
-package Servlet.in.com;
+package com.blossomcart.servlet;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
@@ -8,16 +8,16 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class Controller
+ * Servlet implementation class Contoller
  */
-@WebServlet("/Controller")
-public class Controller extends HttpServlet {
+@WebServlet("/Contoller")
+public class Contoller extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public Controller() {
+    public Contoller() {
         super();
         // TODO Auto-generated constructor stub
     }
