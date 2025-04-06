@@ -1,20 +1,28 @@
 package com.blossomcart.util;
 
 import java.sql.Connection;
+import java.sql.DatabaseMetaData;
+import java.sql.SQLException;
 
 public class TestDB {
     public static void main(String[] args) {
-		Connection con = null;
         DBConnection db = new DBConnection();
-        try {
-            con = db.Dbconnect();
-            
+
+        try (Connection con = db.Dbconnect()) {
             if (con != null) {
-            	System.out.println("Sucess");
-                
+                System.out.println("✅ Connected successfully!");
+
+                DatabaseMetaData metaData = con.getMetaData();
+                System.out.println("DB: " + metaData.getURL());
+                System.out.println("Driver: " + metaData.getDriverName());
+                System.out.println("User: " + metaData.getUserName());
+            } else {
+                System.out.println("❌ Connection failed.");
             }
+        } catch (SQLException e) {
+            e.printStackTrace();
         } catch (Exception e) {
-            System.out.println(e);
+            e.printStackTrace(); // Optional - handles Class.forName or other errors
         }
     }
 }

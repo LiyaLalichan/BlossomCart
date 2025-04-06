@@ -8,7 +8,7 @@ public class DBConnection {
 	
     public Connection Dbconnect() {
    	 try {
-   		Class.forName("com.mysql.cj.jdbc.Driver");
+   		Class.forName("com.mysql.cj.jdbc.Driver"); // ✅ Correct for 8.x
 
    	 }
    	 catch(ClassNotFoundException e) {
