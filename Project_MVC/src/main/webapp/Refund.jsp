@@ -5,32 +5,9 @@
 <head>
 <meta charset="UTF-8">
 <title>BLOSSOMCART</title>
-<link rel="stylesheet"type="text/css" href="css/logincss.css">
  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> 
     <link rel="stylesheet" type="text/css" href="MAIN_CSS/viewstyle.css">
-     <style>
-        .login-container {
-            max-width: 400px;
-            margin: 60px auto;
-            background: #f9f9f9;
-            padding: 30px;
-            border-radius: 16px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        .login-container h2 {
-            text-align: center;
-            margin-bottom: 25px;
-        }
-        a {
-        text-decoration: none;
-        color: #000; /* black or any desired color */
-    }
-
-    a:hover {
-        color: #dc3545; /* optional: red on hover */
-    }
-    </style>
 </head>
 <body>
 
@@ -63,13 +40,11 @@
 </div>
 
 <div class="container main-nav">
-    <div class="logo">
+     <div class="logo">
       <a href="View.jsp"><img src="Image/PROJECT LOGO.png" alt="Logo" class="logo-img" ></a>
     </div>
    <div class="main-menu d-flex align-items-center gap-3">
-
-  
-    <a href="Anniversary.jsp" class="nav-link">Anniversary</a>
+     <a href="Anniversary.jsp" class="nav-link">Anniversary</a>
     <a href="Birthday.jsp" class="nav-link">BIRTHDAY FLOWERS</a>
     <a href="Congrats.jsp" class="nav-link">Congratulations</a>
     <a href="Love.jsp" class="nav-link">Love & Romance</a>
@@ -84,29 +59,64 @@
     <span>Send Love, Send Flowers – Midnight Delivery Available!</span>
   </div>
 </div>
-<div class="login-container">
-    <h2>Login to BlossomCart</h2>
-    <form action="LoginServlet" method="post">
-        <div class="mb-3">
-            <label for="email" class="form-label">Email address:</label>
-            <input type="email" class="form-control" id="email" name="email" placeholder="you@example.com" required>
-        </div>
 
-        <div class="mb-3">
-            <label for="password" class="form-label">Password:</label>
-            <input type="password" class="form-control" id="password" name="password"
-                   placeholder="Enter password" minlength="6" required>
-        </div>
+<div class="container mt-5 mb-5">
+    <h2 class="mb-4">Refund Policy</h2>
+    <p>At <strong>BlossomCart</strong>, customer satisfaction is our top priority. We take great pride in delivering fresh, beautiful flowers and gifts. However, we understand that there may be rare occasions where refunds or replacements are necessary. Please review our refund policy below:</p>
 
-        <div class="text-center">
-    <button type="submit" class="btn btn-dark px-5">Login</button>
+    <h5 class="mt-4">✅ Eligibility for Refunds</h5>
+    <ul>
+        <li>Damaged or wilted flowers with proof shared within <strong>24 hours</strong> of delivery.</li>
+        <li>Non-delivery due to BlossomCart’s error.</li>
+        <li>Incorrect product delivered compared to what was ordered.</li>
+    </ul>
+
+    <h5 class="mt-4">❌ Non-Refundable Situations</h5>
+    <ul>
+        <li>Incorrect delivery address provided by the customer.</li>
+        <li>Recipient not available at delivery time.</li>
+        <li>Orders canceled <strong>within 2 hours of delivery</strong>.</li>
+        <li>Customized products unless defective.</li>
+    </ul>
+
+    <h5 class="mt-4">🔁 How to Request a Refund</h5>
+    <p>To request a refund, please email us at <strong>support@blossomcart.in</strong> with:</p>
+    <ul>
+        <li>Subject line: <code>Refund Request – [Order ID]</code></li>
+        <li>Order details and reason</li>
+        <li>Photo proof (if applicable)</li>
+        <li>Request must be made within <strong>24 hours of delivery</strong></li>
+    </ul>
+
+    <h5 class="mt-4">⏳ Refund Processing Time</h5>
+    <p>Approved refunds will be processed within <strong>5–7 business days</strong> back to the original payment method.</p>
+
+    <h5 class="mt-4">💬 Need Help?</h5>
+    <p>Email us at <strong>support@blossomcart.in</strong> or call <strong>+91 98765 43210</strong> (Mon–Fri, 10 AM – 6 PM | Sun: 10 AM – 4 PM).</p>
 </div>
-        <div class="mt-3 text-center">
-            <p>Don't have an account? <a href="register.jsp">Register here</a></p>
-        </div>
-    </form>
+
+ <footer>
+    <div class="footer-col">
+      <h4>Resources</h4>
+     <ul>
+       <li><a href="About_Us.jsp">About Us</a></li>
+        <li><a href="Terms.jsp">Terms of service</a></li>
+        <li><a href="Refund.jsp">Refund Policy</a></li>
+        <li><a href="Privacy.jsp">Privacy Policy</a></li>
+        <li><a href="Contact.jsp">Contact Us</a></li>
+      </ul>
     </div>
-    
+
+    <div class="footer-col">
+      <h4>Connect With Us</h4>
+      <p>Explore our social media channels to read about our latest insights.</p>
+      <p style="margin-top: 10px; font-size: 14px;"><strong>Email:</strong> support@blossomcart.in</p>
+      <p style="font-size: 14px;"><strong>Helpline:</strong> +91 98765 43210 (Mon–Fri, 10 AM – 6 PM | Sunday: 10:00 AM – 4:00 PM IST)</p>
+    </div>
+    </div>
+  </footer>
+
+  <div class="bottom-text">© 2025 BLOSSOMCART</div>
 
 </body>
 </html>

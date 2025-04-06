@@ -5,32 +5,9 @@
 <head>
 <meta charset="UTF-8">
 <title>BLOSSOMCART</title>
-<link rel="stylesheet"type="text/css" href="css/logincss.css">
  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> 
     <link rel="stylesheet" type="text/css" href="MAIN_CSS/viewstyle.css">
-     <style>
-        .login-container {
-            max-width: 400px;
-            margin: 60px auto;
-            background: #f9f9f9;
-            padding: 30px;
-            border-radius: 16px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        .login-container h2 {
-            text-align: center;
-            margin-bottom: 25px;
-        }
-        a {
-        text-decoration: none;
-        color: #000; /* black or any desired color */
-    }
-
-    a:hover {
-        color: #dc3545; /* optional: red on hover */
-    }
-    </style>
 </head>
 <body>
 
@@ -45,7 +22,7 @@
 
         <!-- Right side icon -->
         <div>
-           <a href="login.jsp" class="text-dark fs-5">
+            <a href="login.jsp" class="text-dark fs-5">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
             <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/><path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
             </svg></a>
@@ -63,12 +40,10 @@
 </div>
 
 <div class="container main-nav">
-    <div class="logo">
+   <div class="logo">
       <a href="View.jsp"><img src="Image/PROJECT LOGO.png" alt="Logo" class="logo-img" ></a>
     </div>
    <div class="main-menu d-flex align-items-center gap-3">
-
-  
     <a href="Anniversary.jsp" class="nav-link">Anniversary</a>
     <a href="Birthday.jsp" class="nav-link">BIRTHDAY FLOWERS</a>
     <a href="Congrats.jsp" class="nav-link">Congratulations</a>
@@ -84,29 +59,53 @@
     <span>Send Love, Send Flowers – Midnight Delivery Available!</span>
   </div>
 </div>
-<div class="login-container">
-    <h2>Login to BlossomCart</h2>
-    <form action="LoginServlet" method="post">
-        <div class="mb-3">
-            <label for="email" class="form-label">Email address:</label>
-            <input type="email" class="form-control" id="email" name="email" placeholder="you@example.com" required>
-        </div>
 
-        <div class="mb-3">
-            <label for="password" class="form-label">Password:</label>
-            <input type="password" class="form-control" id="password" name="password"
-                   placeholder="Enter password" minlength="6" required>
-        </div>
+<div class="container my-5">
+    <h5 class="fw-bold"> Express Love with Every Bloom 💖</h5>
+    <p class="text-muted">
+   Love is the deepest feeling there is. It is sublime as well as strong. It is one of the simplest and at the same time, 
+   the most complex emotion known to the human species. 
+   Simple, because you know that your beloved means the world to you. 
+   And complex, because you don't know how to express yourself and how to give words to your innermost feelings!
+    </p>
 
-        <div class="text-center">
-    <button type="submit" class="btn btn-dark px-5">Login</button>
-</div>
-        <div class="mt-3 text-center">
-            <p>Don't have an account? <a href="register.jsp">Register here</a></p>
+      <div class="row g-4 text-center">
+
+        <!-- Product 1 -->
+        <div class="col-6 col-md-3">
+            <div class="product-card">
+              <a href="#"> <img src="Image/image.jpg" class="img-fluid rounded" alt="Product 1"></a>
+                <div class="product-name"></div>
+                <div class="product-price"></div>
+            </div>
         </div>
-    </form>
+         <!-- Product 1 -->
+        
+        </div>
+        </div>
+        
+        <footer>
+    <div class="footer-col">
+      <h4>Resources</h4>
+      <ul>
+       <li><a href="About_Us.jsp">About Us</a></li>
+        <li><a href="Terms.jsp">Terms of service</a></li>
+        <li><a href="Refund.jsp">Refund Policy</a></li>
+        <li><a href="Privacy.jsp">Privacy Policy</a></li>
+        <li><a href="Contact.jsp">Contact Us</a></li>
+      </ul>
     </div>
-    
 
+    <div class="footer-col">
+      <h4>Connect With Us</h4>
+      <p>Explore our social media channels to read about our latest insights.</p>
+      <p style="margin-top: 10px; font-size: 14px;"><strong>Email:</strong> support@blossomcart.in</p>
+      <p style="font-size: 14px;"><strong>Helpline:</strong> +91 98765 43210 (Mon–Fri, 10 AM – 6 PM | Sunday: 10:00 AM – 4:00 PM IST)</p>
+    </div>
+    </div>
+  </footer>
+
+  <div class="bottom-text">© 2025 BLOSSOMCART</div>
+      
 </body>
 </html>

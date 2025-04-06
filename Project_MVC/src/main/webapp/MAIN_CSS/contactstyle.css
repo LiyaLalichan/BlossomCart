@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+
+.contact-info h2 {
+  color: #d63384;
+  font-weight: 600;
+}
+
+.contact-info p {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.contact-info a {
+  text-decoration: none;
+  color: #d63384;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}

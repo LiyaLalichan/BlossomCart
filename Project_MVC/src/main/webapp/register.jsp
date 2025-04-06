@@ -4,38 +4,117 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here
+<title>BLOSSOMCART</title>
+<link rel="stylesheet"type="text/css" href="css/logincss.css">
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> 
+    <link rel="stylesheet" type="text/css" href="MAIN_CSS/viewstyle.css">
+     <style>
+        .register-container {
+            max-width: 400px;
+            margin: 60px auto;
+            background: #f9f9f9;
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .register-container h2 {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+        a {
+        text-decoration: none;
+        color: #000; /* black or any desired color */
+    }
 
-</title>
-<link rel="stylesheet"type="text/css" href="css/Style.css">
+    a:hover {
+        color: #dc3545; /* optional: red on hover */
+    }
+    </style>
 </head>
-  <body style="font-family: sans-serif;">
+<body>
+
+  <div class="container-fluid border-bottom bg-white">
+    <div class="container-fluid d-flex justify-content-between align-items-center py-2 px-4 top-nav icon-group">
+        <!-- Left side links -->
+        <div class="d-flex">
+            <a href="About_Us.jsp" class="me-4 text-decoration-none text-dark">About</a>
+            <a href="Contact.jsp" class="me-4 text-decoration-none text-dark">Contact Us</a>
+           
+        </div>
+
+        <!-- Right side icon -->
+        <div>
+           <a href="login.jsp" class="text-dark fs-5">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/><path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
+            </svg></a>
+            
+            <a href="#" class="text-dark fs-5"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+            </svg></a>
+            
+            <a href="#" class="text-dark fs-5"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-cart4" viewBox="0 0 16 16">
+            <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5M3.14 5l.5 2H5V5zM6 5v2h2V5zm3 0v2h2V5zm3 0v2h1.36l.5-2zm1.11 3H12v2h.61zM11 8H9v2h2zM8 8H6v2h2zM5 8H3.89l.5 2H5zm0 5a1 1 0 1 0 0 2 1 1 0 0 0 0-2m-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0m9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2m-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0"/>
+            </svg></a>
+        </div>
         
-        <div class="div">
-<h2>Create account</h2>
-    <form id="myForm">
-        <label class="la">First Name</label><br>
-        <input type="text" placeholder="Enter your Firstname" class="in" id="firstName" name="firstName" required><br>
-        <span id="firstNameError" class="error"></span><br>
+      </div>
+</div>
 
-        <label class="la">Last Name</label><br>
-        <input type="text" placeholder="Enter your Lastname" class="in" id="lastName" name="lastName" required><br>
-        <span id="lastNameError" class="error"></span><br>
+<div class="container main-nav">
+   <div class="logo">
+      <a href="View.jsp"><img src="Image/PROJECT LOGO.png" alt="Logo" class="logo-img" ></a>
+    </div>
+   <div class="main-menu d-flex align-items-center gap-3">
 
-        <label class="la">Email</label><br>
-        <input type="email" placeholder="Enter your Email" class="in" id="email" name="email" required><br>
-        <span id="emailError" class="error"></span><br>
+  
+    <a href="Anniversary.jsp" class="nav-link">Anniversary</a>
+    <a href="Birthday.jsp" class="nav-link">BIRTHDAY FLOWERS</a>
+    <a href="Congrats.jsp" class="nav-link">Congratulations</a>
+    <a href="Love.jsp" class="nav-link">Love & Romance</a>
+</div>
 
-        <label class="la">Phone Number</label><br>
-        <input type="tel" placeholder="Enter your Phone Number" class="in" id="phone" name="phone" required pattern="^\d{10}$"><br>
-        <span id="phoneError" class="error"></span><br>
+</div>
 
-        <label class="la">Password</label><br>
-        <input type="password" placeholder="Enter your Password" class="in" id="password" name="password" required minlength="6"><br>
-        <span id="passwordError" class="error"></span><br>
+<div class="marquee-container">
+  <div class="marquee">
+    <span>Welcome to BlossomCart – Your Trusted Online Flower Boutique!</span>
+    <span>SEND FARM FRESH FLOWERS – With Free Shipping* 💐</span>
+    <span>Send Love, Send Flowers – Midnight Delivery Available!</span>
+  </div>
+</div>
+        
+  <div class="register-container">      
+<h2>Register to BlossomCart</h2>
+<form action="RegisterServlet" method="post">
+<div class="mb-3">
+    <label for="fname" class="form-label">First Name</label><br>
+    <input type="text" placeholder="Enter your Firstname" class="form-control" name="firstName" required pattern="[A-Za-z]{2,}">
+    </div>
 
-        <input type="submit" value="Create" class="btn">
-    </form>
+<div class="mb-3">
+    <label for="lname" class="form-label">Last Name</label><br>
+    <input type="text" placeholder="Enter your Lastname"class="form-control" name="lastName" required pattern="[A-Za-z]{2,}">
+</div>
+<div class="mb-3">
+    <label for="email" class="form-label">Email</label><br>
+    <input type="email" placeholder="Enter your Email" class="form-control"name="email" required>
+</div>
+<div class="mb-3">
+    <label for="phone" class="form-label">Phone Number</label><br>
+    <input type="tel" placeholder="Enter your Phone Number"class="form-control" name="phone" required pattern="^\d{10}$" title="Enter 10 digit phone number">
+</div>
+<div class="mb-3">
+    <label for="password" class="form-label">Password</label><br>
+    <input type="password" placeholder="Enter your Password" class="form-control" name="password" required minlength="6">
+</div>
+<div class="mb-3">
+   <div class="mt-3 text-center">
+        <input type="submit" value="Create" class="btn btn-dark px-5">
+    </div>
+    </div>
+</form>
 
 
 

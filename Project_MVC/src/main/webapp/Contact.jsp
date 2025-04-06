@@ -1,51 +1,29 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>BLOSSOMCART</title>
-<link rel="stylesheet"type="text/css" href="css/logincss.css">
- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> 
-    <link rel="stylesheet" type="text/css" href="MAIN_CSS/viewstyle.css">
-     <style>
-        .login-container {
-            max-width: 400px;
-            margin: 60px auto;
-            background: #f9f9f9;
-            padding: 30px;
-            border-radius: 16px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        .login-container h2 {
-            text-align: center;
-            margin-bottom: 25px;
-        }
-        a {
-        text-decoration: none;
-        color: #000; /* black or any desired color */
-    }
 
-    a:hover {
-        color: #dc3545; /* optional: red on hover */
-    }
-    </style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>BLOSSOMCART</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="MAIN_CSS/contactstyle.css">
+      <link rel="stylesheet" type="text/css" href="MAIN_CSS/viewstyle.css">
 </head>
 <body>
-
-  <div class="container-fluid border-bottom bg-white">
+<div class="container-fluid border-bottom">
     <div class="container-fluid d-flex justify-content-between align-items-center py-2 px-4 top-nav icon-group">
         <!-- Left side links -->
         <div class="d-flex">
             <a href="About_Us.jsp" class="me-4 text-decoration-none text-dark">About</a>
-            <a href="Contact.jsp" class="me-4 text-decoration-none text-dark">Contact Us</a>
-           
+            <a href="#" class="me-4 text-decoration-none text-dark">Contact Us</a>
+            
         </div>
 
         <!-- Right side icon -->
         <div>
-           <a href="login.jsp" class="text-dark fs-5">
+             <a href="login.jsp" class="text-dark fs-5">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
             <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/><path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
             </svg></a>
@@ -66,15 +44,13 @@
     <div class="logo">
       <a href="View.jsp"><img src="Image/PROJECT LOGO.png" alt="Logo" class="logo-img" ></a>
     </div>
-   <div class="main-menu d-flex align-items-center gap-3">
-
-  
-    <a href="Anniversary.jsp" class="nav-link">Anniversary</a>
+    <div class="main-menu">
+        <a href="Anniversary.jsp" class="nav-link">Anniversary</a>
     <a href="Birthday.jsp" class="nav-link">BIRTHDAY FLOWERS</a>
     <a href="Congrats.jsp" class="nav-link">Congratulations</a>
     <a href="Love.jsp" class="nav-link">Love & Romance</a>
-</div>
-
+    </div>
+   
 </div>
 
 <div class="marquee-container">
@@ -84,29 +60,41 @@
     <span>Send Love, Send Flowers – Midnight Delivery Available!</span>
   </div>
 </div>
-<div class="login-container">
-    <h2>Login to BlossomCart</h2>
-    <form action="LoginServlet" method="post">
-        <div class="mb-3">
-            <label for="email" class="form-label">Email address:</label>
-            <input type="email" class="form-control" id="email" name="email" placeholder="you@example.com" required>
-        </div>
 
-        <div class="mb-3">
-            <label for="password" class="form-label">Password:</label>
-            <input type="password" class="form-control" id="password" name="password"
-                   placeholder="Enter password" minlength="6" required>
-        </div>
-
-        <div class="text-center">
-    <button type="submit" class="btn btn-dark px-5">Login</button>
-</div>
-        <div class="mt-3 text-center">
-            <p>Don't have an account? <a href="register.jsp">Register here</a></p>
-        </div>
-    </form>
+  <div class="container contact-info py-5">
+    <h2 class="text-center mb-4">📞 Contact Us</h2>
+    <div class="row justify-content-center">
+      <div class="col-md-6 text-center">
+        <p><strong>📍 Address:</strong><br>123 Bloom Street, Rose Garden, Trivandrum, Kerala,India</p>
+        <p><strong>📞 Phone:</strong><br><a href="tel:+919876543210">+91 98765 43210</a></p>
+        <p><strong>📧 Email:</strong><br><a href="mailto:support@blossomcart.in">support@blossomcart.in</a></p>
+        <p><strong>⏰ Working Hours:</strong><br>Mon – Sat: 9:00 AM – 8:00 PM<br>Sunday: 10:00 AM – 4:00 PM</p>
+      </div>
     </div>
-    
+  </div>
+  
+<footer>
+    <div class="footer-col">
+      <h4>Resources</h4>
+      <ul>
+       <li><a href="About_Us.jsp">About Us</a></li>
+        <li><a href="Terms.jsp">Terms of service</a></li>
+        <li><a href="#">Refund Policy</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="Contact.jsp">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Connect With Us</h4>
+      <p>Explore our social media channels to read about our latest insights.</p>
+      <p style="margin-top: 10px; font-size: 14px;"><strong>Email:</strong> support@blossomcart.in</p>
+      <p style="font-size: 14px;"><strong>Helpline:</strong> +91 98765 43210 (Mon–Fri, 10 AM – 6 PM | Sunday: 10:00 AM – 4:00 PM IST)</p>
+    </div>
+    </div>
+  </footer>
+
+  <div class="bottom-text">© 2025 BLOSSOMCART</div>
 
 </body>
 </html>

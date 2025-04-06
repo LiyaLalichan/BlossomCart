@@ -5,32 +5,9 @@
 <head>
 <meta charset="UTF-8">
 <title>BLOSSOMCART</title>
-<link rel="stylesheet"type="text/css" href="css/logincss.css">
  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> 
     <link rel="stylesheet" type="text/css" href="MAIN_CSS/viewstyle.css">
-     <style>
-        .login-container {
-            max-width: 400px;
-            margin: 60px auto;
-            background: #f9f9f9;
-            padding: 30px;
-            border-radius: 16px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        .login-container h2 {
-            text-align: center;
-            margin-bottom: 25px;
-        }
-        a {
-        text-decoration: none;
-        color: #000; /* black or any desired color */
-    }
-
-    a:hover {
-        color: #dc3545; /* optional: red on hover */
-    }
-    </style>
 </head>
 <body>
 
@@ -67,8 +44,6 @@
       <a href="View.jsp"><img src="Image/PROJECT LOGO.png" alt="Logo" class="logo-img" ></a>
     </div>
    <div class="main-menu d-flex align-items-center gap-3">
-
-  
     <a href="Anniversary.jsp" class="nav-link">Anniversary</a>
     <a href="Birthday.jsp" class="nav-link">BIRTHDAY FLOWERS</a>
     <a href="Congrats.jsp" class="nav-link">Congratulations</a>
@@ -84,29 +59,58 @@
     <span>Send Love, Send Flowers – Midnight Delivery Available!</span>
   </div>
 </div>
-<div class="login-container">
-    <h2>Login to BlossomCart</h2>
-    <form action="LoginServlet" method="post">
-        <div class="mb-3">
-            <label for="email" class="form-label">Email address:</label>
-            <input type="email" class="form-control" id="email" name="email" placeholder="you@example.com" required>
-        </div>
 
-        <div class="mb-3">
-            <label for="password" class="form-label">Password:</label>
-            <input type="password" class="form-control" id="password" name="password"
-                   placeholder="Enter password" minlength="6" required>
-        </div>
+<div class="container my-5">
+  <h2 class="text-center mb-4">Terms and Conditions</h2>
+  <p>Welcome to BlossomCart. By accessing or using our website, you agree to comply with and be bound by the following terms and conditions.</p>
+  
+  <h4>1. Product Availability</h4>
+  <p>All products are subject to availability. We reserve the right to substitute flowers or containers if necessary due to seasonal availability or other unforeseen issues.</p>
 
-        <div class="text-center">
-    <button type="submit" class="btn btn-dark px-5">Login</button>
+  <h4>2. Order Cancellation & Modifications</h4>
+  <p>Orders can be canceled or modified within 1 hour of placement. For urgent changes, please contact our support team immediately at support@blossomcart.in.</p>
+
+  <h4>3. Delivery Timings</h4>
+  <p>We strive to deliver on time, but unforeseen circumstances such as traffic, weather, or address issues may cause delays. Midnight and same-day deliveries are subject to availability.</p>
+
+  <h4>4. Payments</h4>
+  <p>All transactions are secure. We accept major debit/credit cards, UPI, and net banking. Payment must be completed before dispatch.</p>
+
+  <h4>5. Returns & Refunds</h4>
+  <p>Due to the perishable nature of flowers, returns are not accepted. Refunds are only issued if the product is damaged or undelivered. Refund requests must be raised within 24 hours of delivery.</p>
+
+  <h4>6. Privacy Policy</h4>
+  <p>Your data is secure with us. We never share your personal information with third parties without your consent. Please read our <a href="#">Privacy Policy</a> for full details.</p>
+
+  <h4>7. Changes to Terms</h4>
+  <p>We may update these terms periodically. Continued use of the website after changes implies acceptance of the revised terms.</p>
+
+  <p>If you have any questions, feel free to contact us at <a href="mailto:support@blossomcart.in">support@blossomcart.in</a>.</p>
 </div>
-        <div class="mt-3 text-center">
-            <p>Don't have an account? <a href="register.jsp">Register here</a></p>
-        </div>
-    </form>
+
+
+ <footer>
+    <div class="footer-col">
+      <h4>Resources</h4>
+       <ul>
+       <li><a href="About_Us.jsp">About Us</a></li>
+        <li><a href="Terms.jsp">Terms of service</a></li>
+        <li><a href="Refund.jsp">Refund Policy</a></li>
+        <li><a href="Privacy.jsp">Privacy Policy</a></li>
+        <li><a href="Contact.jsp">Contact Us</a></li>
+      </ul>
     </div>
-    
+
+    <div class="footer-col">
+      <h4>Connect With Us</h4>
+      <p>Explore our social media channels to read about our latest insights.</p>
+      <p style="margin-top: 10px; font-size: 14px;"><strong>Email:</strong> support@blossomcart.in</p>
+      <p style="font-size: 14px;"><strong>Helpline:</strong> +91 98765 43210 (Mon–Fri, 10 AM – 6 PM | Sunday: 10:00 AM – 4:00 PM IST)</p>
+    </div>
+    </div>
+  </footer>
+
+  <div class="bottom-text">© 2025 BLOSSOMCART</div>
 
 </body>
 </html>
