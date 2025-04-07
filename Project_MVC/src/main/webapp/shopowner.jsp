@@ -15,28 +15,40 @@
 
 
 <div class="div">
-<form>
-<label>OWNER NAME</label><br>
+ <form action="SRegisterServlet" method="post">
+        <label>OWNER NAME</label>
+        <input type="text" name="owner_name" placeholder="Enter name" class="in" required><br>
+    
+        <label>SHOP NAME</label>
+        <input type="text" name="shop_name" placeholder="Enter your company name" class="in" required><br>
+    
+        <label>ADDRESS_1</label>
+        <input type="text" name="address_1" placeholder="Enter your Address" class="in" required><br>
+    
+        <label>ADDRESS_2</label>
+        <input type="text" name="address_2" placeholder="Enter your address" class="in" required><br>
+    
+        <label>DISTRICT</label>
+        <input type="text" name="district" placeholder="Enter your district" class="in" required><br>
+    
+        <label>STATE</label>
+        <input type="text" name="state" placeholder="Enter state" class="in" required><br>
+    
+        <label>PINCODE</label>
+        <input type="number" name="pincode" placeholder="Enter pincode" class="in" required min="100000" max="999999"><br>
+    
+        <label>LICENSE_ID</label>
+        <input type="number" name="license_id" placeholder="Enter id" class="in" required><br>
+    
+        <label>PHONE NUMBER</label>
+        <input type="tel" name="phone" placeholder="Enter phone number" class="in" required pattern="[0-9]{10}" title="Please enter a valid 10-digit phone number"><br>
+    
+        <label>E-MAIL_ID</label>
+        <input type="email" name="email" placeholder="Enter your email" class="in" required><br>
+    
+        <button type="submit">Submit</button>
+    </form>
 
-<input type="text" placeholder="Enter name" class="in"><br><br>
-<label>SHOP NAME</label><br>
-<input type="text" placeholder="Enter your company name" class="in"><br><br>
-<label>ADDRESS</label><br>
-<input type="text" placeholder="Enter your Address" class="in"><br><br>
-
-<label>LICENSE ID</label><br>
-<input type="text" placeholder="Enter your id " class="in">
-<label>PINCODE</label><br>
-<input type="text" placeholder="Enter code" class="in">
-<br><br>
-<button type="submit">
-submit
-</button>
-
-
-
-
-</form>
 
 
 

@@ -87,7 +87,7 @@
         
   <div class="register-container">      
 <h2>Register to BlossomCart</h2>
-<form action="RegisterServlet" method="post">
+<form action="CRegisterServlet" method="post">
 <div class="mb-3">
     <label for="fname" class="form-label">First Name</label><br>
     <input type="text" placeholder="Enter your Firstname" class="form-control" name="firstName" required pattern="[A-Za-z]{2,}">
