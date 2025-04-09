@@ -86,7 +86,7 @@
 </div>
         
   <div class="register-container">      
-<h2>Register to BlossomCart</h2>
+<h2>Start Your BlossomCart Journey</h2>
 <form action="CRegisterServlet" method="post">
 <div class="mb-3">
     <label for="fname" class="form-label">First Name</label><br>
