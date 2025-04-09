@@ -94,8 +94,8 @@
       <ul>
        <li><a href="About_Us.jsp">About Us</a></li>
         <li><a href="Terms.jsp">Terms of service</a></li>
-        <li><a href="#">Refund Policy</a></li>
-        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="Refund.jsp">Refund Policy</a></li>
+        <li><a href="Privacy.jsp">Privacy Policy</a></li>
         <li><a href="Contact.jsp">Contact Us</a></li>
       </ul>
     </div>

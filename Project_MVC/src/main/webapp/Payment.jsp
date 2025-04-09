@@ -18,6 +18,11 @@
         height: fit-content;
       }
     }
+
+    .selected {
+      border: 2px solid #ec4899;
+      border-radius: 8px;
+    }
   </style>
 </head>
 
@@ -30,7 +35,7 @@
         <!-- Contact -->
         <div class="bg-white p-6 rounded-lg shadow">
           <h2 class="text-xl font-semibold mb-4">Contact</h2>
-          <input type="email" placeholder="Email" class="w-full border p-2 rounded mb-2" />
+          <input type="email" id="email" placeholder="Email" class="w-full border p-2 rounded mb-2" required />
           <label class="flex items-center space-x-2">
             <input type="checkbox" />
             <span>Email me with news and offers</span>
@@ -44,14 +49,14 @@
             <option>India</option>
           </select>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <input type="text" placeholder="First name" class="border p-2 rounded" />
-            <input type="text" placeholder="Last name" class="border p-2 rounded" />
-            <input type="text" placeholder="Address" class="md:col-span-2 border p-2 rounded" />
+            <input type="text" id="firstName" placeholder="First name" class="border p-2 rounded" required />
+            <input type="text" id="lastName" placeholder="Last name" class="border p-2 rounded" required />
+            <input type="text" placeholder="Address" class="md:col-span-2 border p-2 rounded" required />
             <input type="text" placeholder="Apartment, suite, etc." class="md:col-span-2 border p-2 rounded" />
-            <input type="text" placeholder="City" class="border p-2 rounded" />
-            <input type="text" placeholder="State" class="border p-2 rounded" />
-            <input type="text" placeholder="PIN code" class="border p-2 rounded md:col-span-2" />
-            <input type="text" placeholder="Phone" class="md:col-span-2 border p-2 rounded" />
+            <input type="text" placeholder="City" class="border p-2 rounded" required />
+            <input type="text" placeholder="State" class="border p-2 rounded" required />
+            <input type="text" id="pincode" placeholder="PIN code" class="border p-2 rounded md:col-span-2" required />
+            <input type="text" id="phone" placeholder="Phone" class="md:col-span-2 border p-2 rounded" required />
           </div>
           <label class="flex items-center space-x-2 mt-4">
             <input type="checkbox" />
@@ -60,24 +65,24 @@
         </div>
 
         <!-- Payment -->
-        <div class="bg-white p-6 rounded-lg shadow">
+        <form id="checkoutForm" onsubmit="return validateForm()" class="bg-white p-6 rounded-lg shadow">
           <h2 class="text-xl font-semibold mb-4">Payment</h2>
           <div class="border p-4 rounded mb-4 space-y-4">
             <p class="font-medium text-center">Select Payment Method</p>
             <div class="flex flex-wrap justify-center gap-10">
-              <div class="flex flex-col items-center cursor-pointer" onclick="showPayment('visa')">
+              <div class="flex flex-col items-center cursor-pointer payment-method" data-method="visa" onclick="showPayment('visa')">
                 <img src="https://img.icons8.com/color/48/000000/visa.png" class="h-10" alt="Visa" />
                 <span class="text-sm mt-2">Visa</span>
               </div>
-              <div class="flex flex-col items-center cursor-pointer" onclick="showPayment('paytm')">
+              <div class="flex flex-col items-center cursor-pointer payment-method" data-method="paytm" onclick="showPayment('paytm')">
                 <img src="https://img.icons8.com/color/48/000000/paytm.png" class="h-10" alt="Paytm" />
                 <span class="text-sm mt-2">Paytm</span>
               </div>
-              <div class="flex flex-col items-center cursor-pointer" onclick="showPayment('gpay')">
+              <div class="flex flex-col items-center cursor-pointer payment-method" data-method="gpay" onclick="showPayment('gpay')">
                 <img src="https://img.icons8.com/color/48/000000/google-pay.png" class="h-10" alt="Google Pay" />
                 <span class="text-sm mt-2">GPay</span>
               </div>
-              <div class="flex flex-col items-center cursor-pointer" onclick="showPayment('cod')">
+              <div class="flex flex-col items-center cursor-pointer payment-method" data-method="cod" onclick="showPayment('cod')">
                 <img src="https://img.icons8.com/?size=100&id=7976&format=png&color=000000" class="h-10" alt="COD" />
                 <span class="text-sm mt-2">Cash on Delivery</span>
               </div>
@@ -85,17 +90,14 @@
 
             <!-- Payment-specific forms -->
             <div id="visa-form" class="hidden mt-6">
-              <input type="text" placeholder="Enter Card Number" class="w-full border p-2 rounded" />
+              <input type="text" id="visaCard" placeholder="Enter Card Number" class="w-full border p-2 rounded" />
             </div>
-
             <div id="paytm-form" class="hidden mt-6">
-              <input type="text" placeholder="Enter Paytm Number" class="w-full border p-2 rounded" />
+              <input type="text" id="paytmNumber" placeholder="Enter Paytm Number" class="w-full border p-2 rounded" />
             </div>
-
             <div id="gpay-form" class="hidden mt-6">
-              <input type="text" placeholder="Enter UPI ID for GPay" class="w-full border p-2 rounded" />
+              <input type="text" id="gpayUpi" placeholder="Enter UPI ID for GPay" class="w-full border p-2 rounded" />
             </div>
-
             <div id="cod-form" class="hidden mt-6">
               <p class="text-gray-600">You will pay on delivery. No further details required.</p>
             </div>
@@ -132,8 +134,8 @@
             </div>
           </div>
 
-          <button class="mt-6 w-full bg-black text-white py-3 rounded-lg hover:bg-gray-800 transition">Pay now</button>
-        </div>
+          <button type="submit" class="mt-6 w-full bg-black text-white py-3 rounded-lg hover:bg-gray-800 transition">Pay now</button>
+        </form>
       </div>
 
       <!-- Right Section -->
@@ -141,9 +143,9 @@
         <div class="bg-white p-6 rounded-lg shadow">
           <div class="flex justify-between items-center">
             <div class="flex items-center space-x-4">
-              <img src="https://img.icons8.com/emoji/48/000000/bouquet.png" class="w-12 h-12" />
+              <img src="Image/bouquet.webp" class="w-24 h-24" />
               <div>
-                <p class="font-semibold">Pink Sunflower Theme</p>
+                <p class="font-semibold">Red Ross Bouquet</p>
                 <p class="text-sm text-gray-500">12 Flowers</p>
                 <p class="text-sm text-gray-500">Delivery Location: Aluva</p>
                 <p class="text-sm text-gray-500">Delivery Date: 09-04-2025</p>
@@ -183,14 +185,72 @@
     }
 
     function showPayment(method) {
-    	  const methods = ['visa', 'paytm', 'gpay', 'cod'];
-    	  methods.forEach(m => {
-    	    document.getElementById(m + '-form').classList.add('hidden');
-    	  });
-    	  document.getElementById(method + '-form').classList.remove('hidden');
-    	}
+      const methods = ['visa', 'paytm', 'gpay', 'cod'];
+      methods.forEach(m => {
+        document.getElementById(m + '-form').classList.add('hidden');
+        document.querySelector(`[data-method="${m}"]`)?.classList.remove('selected');
+      });
+      document.getElementById(method + '-form').classList.remove('hidden');
+      document.querySelector(`[data-method="${method}"]`)?.classList.add('selected');
+    }
 
+    function validateForm() {
+      const email = document.getElementById('email').value.trim();
+      const firstName = document.getElementById('firstName').value.trim();
+      const lastName = document.getElementById('lastName').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      const pincode = document.getElementById('pincode').value.trim();
+
+      const selectedMethodDiv = document.querySelector('.payment-method.selected');
+      const paymentMethod = selectedMethodDiv ? selectedMethodDiv.dataset.method : null;
+
+      const visaCard = document.getElementById('visaCard')?.value.trim();
+      const paytmNumber = document.getElementById('paytmNumber')?.value.trim();
+      const gpayUpi = document.getElementById('gpayUpi')?.value.trim();
+
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      const phoneRegex = /^[0-9]{10}$/;
+      const pinRegex = /^[0-9]{6}$/;
+
+      if (!emailRegex.test(email)) {
+        alert('Please enter a valid email address.');
+        return false;
+      }
+      if (!firstName || !lastName) {
+        alert('First and Last name are required.');
+        return false;
+      }
+      if (!pinRegex.test(pincode)) {
+        alert('PIN code must be 6 digits.');
+        return false;
+      }
+      if (!phoneRegex.test(phone)) {
+        alert('Phone number must be 10 digits.');
+        return false;
+      }
+
+      if (!paymentMethod) {
+        alert('Please select a payment method.');
+        return false;
+      }
+
+      if (paymentMethod === 'visa' && (!visaCard || visaCard.length < 12)) {
+        alert('Please enter a valid Visa card number.');
+        return false;
+      }
+
+      if (paymentMethod === 'paytm' && (!paytmNumber || !phoneRegex.test(paytmNumber))) {
+        alert('Please enter a valid Paytm number.');
+        return false;
+      }
+
+      if (paymentMethod === 'gpay' && (!gpayUpi || !gpayUpi.includes('@'))) {
+        alert('Please enter a valid GPay UPI ID.');
+        return false;
+      }
+
+      return true;
+    }
   </script>
 </body>
-
 </html>

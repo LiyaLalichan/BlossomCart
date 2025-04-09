@@ -66,9 +66,9 @@
     <div class="row justify-content-center">
       <div class="col-md-6 text-center">
         <p><strong>📍 Address:</strong><br>123 Bloom Street, Rose Garden, Trivandrum, Kerala,India</p>
-        <p><strong>📞 Phone:</strong><br><a href="tel:+919876543210">+91 98765 43210</a></p>
+        <p><strong>📞 Phone:</strong><br>+91 98765 43210</p>
         <p><strong>📧 Email:</strong><br><a href="mailto:support@blossomcart.in">support@blossomcart.in</a></p>
-        <p><strong>⏰ Working Hours:</strong><br>Mon – Sat: 9:00 AM – 8:00 PM<br>Sunday: 10:00 AM – 4:00 PM</p>
+        <p><strong>⏰ Working Hours:</strong><br>Mon – Fri: 10:00 AM – 6:00 PM<br>Sunday: 10:00 AM – 4:00 PM IST</p>
       </div>
     </div>
   </div>
@@ -79,8 +79,8 @@
       <ul>
        <li><a href="About_Us.jsp">About Us</a></li>
         <li><a href="Terms.jsp">Terms of service</a></li>
-        <li><a href="#">Refund Policy</a></li>
-        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="Refund.jsp">Refund Policy</a></li>
+        <li><a href="Privacy.jsp">Privacy Policy</a></li>
         <li><a href="Contact.jsp">Contact Us</a></li>
       </ul>
     </div>
