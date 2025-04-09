@@ -8,19 +8,19 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.blossomcart.bean.CReg;
-import com.blossomcart.bean.SReg;
+import com.blossomcart.doa.CRegDao;
 
 /**
- * Servlet implementation class LoginServlet
+ * Servlet implementation class CRegisterServlet
  */
-@WebServlet("/LoginServlet")
-public class LoginServlet extends HttpServlet {
+@WebServlet("/CRegisterServlet")
+public class CRegisterServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public LoginServlet() {
+    public CRegisterServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -39,17 +39,30 @@ public class LoginServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		doGet(request, response);
+		CRegDao obj=new CRegDao();
+		String fname=request.getParameter("firstName");
+		String lname=request.getParameter("lastName");
+		String email=request.getParameter("email");
+		String pword=request.getParameter("password");
+		String pnum=request.getParameter("phone");
 		
-		String uname=request.getParameter("email");
-		String paswrd=request.getParameter("password");
+		
+		
 		try {
-				CReg cobj=new CReg();
-				SReg sobj=new SReg();
-				
-		}
-		catch(Exception e) {
+			CReg reg=new CReg();
+			reg.setFname(fname);
+			reg.setLname(lname);
+			reg.setEmail(email);
+			reg.setPword(pword);
+			reg.setPnum(pnum);
+			String result=obj.cReg(reg);
+			if(result.equals("Succsess")) {
+				System.out.println("Success");
+			}
+		}catch (Exception e) {
 			System.out.println(e);
 		}
+		
 	}
 
 }
