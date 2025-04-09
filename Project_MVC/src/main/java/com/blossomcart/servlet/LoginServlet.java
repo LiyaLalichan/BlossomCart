@@ -8,7 +8,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.blossomcart.bean.CReg;
+import com.blossomcart.bean.Login;
 import com.blossomcart.bean.SReg;
+import com.blossomcart.doa.LoginDao;
 
 /**
  * Servlet implementation class LoginServlet
@@ -42,10 +44,25 @@ public class LoginServlet extends HttpServlet {
 		
 		String uname=request.getParameter("email");
 		String paswrd=request.getParameter("password");
+		String utype=request.getParameter("role");
 		try {
-				CReg cobj=new CReg();
-				SReg sobj=new SReg();
+				Login lobj=new Login();
+				lobj.setUname(uname);
+				lobj.setPword(paswrd);
+				lobj.setUsertype(utype);
+				LoginDao dobj=new LoginDao();
+				boolean result=dobj.uLogin(lobj);
 				
+				if(result=true) {
+					String usertype=lobj.getUsertype();
+					
+					if(usertype.equals("user")) {
+						response.sendRedirect("View.jsp");
+					}
+					else {
+						response.sendRedirect("ShopView.jsp");
+					}
+				}
 		}
 		catch(Exception e) {
 			System.out.println(e);
