@@ -98,8 +98,8 @@
         </div>
 
         <div class="mb-3">
-            <label for="email" class="form-label">Email address:</label>
-            <input type="email" class="form-control" id="email" name="email" placeholder="you@example.com" required>
+            <label for="email" class="form-label">User Name:</label>
+            <input type="text" class="form-control" id="email" name="email" placeholder="" required>
         </div>
 
         <div class="mb-3">

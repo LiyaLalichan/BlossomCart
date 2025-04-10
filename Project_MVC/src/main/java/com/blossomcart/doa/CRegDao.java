@@ -4,6 +4,7 @@ import com.blossomcart.bean.CReg;
 import com.blossomcart.util.DBConnection;
 import java.sql.*;
 public class CRegDao {
+	
 	DBConnection dobj= new DBConnection();
 	public String cReg(CReg reg) {
 		try {

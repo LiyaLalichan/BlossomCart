@@ -71,6 +71,7 @@ public class SRegisterServlet extends HttpServlet {
 			String result=obj.sReg(reg);
 			if(result.equals("Succsess")) {
 				System.out.println("Success");
+				response.sendRedirect("login.jsp");
 			}
 		}catch (Exception e) {
 			System.out.println(e);
