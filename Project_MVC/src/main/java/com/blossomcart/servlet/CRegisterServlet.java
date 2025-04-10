@@ -40,14 +40,12 @@ public class CRegisterServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 //		doGet(request, response);
-		System.out.println("dhdjdfhifjfijf");
 		CRegDao obj=new CRegDao();
 		String fname=request.getParameter("firstName");
 		String lname=request.getParameter("lastName");
 		String email=request.getParameter("email");
 		String pword=request.getParameter("password");
 		String pnum=request.getParameter("phone");
-		System.out.println("dhdjdkjdkjdk");
 		
 		
 		
@@ -61,7 +59,7 @@ public class CRegisterServlet extends HttpServlet {
 			String result = obj.cReg(reg);
 		    System.out.println("Registration result: " + result);  // Debug line
 		    
-		    if(result.equals("Success")) {
+		    if(result.equals("Succsess")) {
 		        System.out.println("Redirecting to login page");
 		        response.sendRedirect("login.jsp");
 		    }
