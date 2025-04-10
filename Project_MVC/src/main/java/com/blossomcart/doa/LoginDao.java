@@ -8,39 +8,57 @@ import com.blossomcart.bean.Login;
 import com.blossomcart.util.DBConnection;
 
 public class LoginDao {
-	DBConnection dobj=new DBConnection();
-	public boolean uLogin(Login lobj) { 
-		boolean isValid=false;
-	
-	try {
-		
-		String utype=lobj.getUsertype();
-		
-		String query=null;
-		
-		if(utype.equals("user")) {
-			query="SELECT email,password FROM  c_register_table where email= ? and password=?";
-		}
-		else if(utype.equals("shopowner")) {
-		
-			query="SELECT owner_name,email FROM  s_register_table where owner_name=? and email=?";
-		}
-		
-		Connection con=dobj.Dbconnect();
-		
-		PreparedStatement ps=con.prepareStatement(query);
-		ps.setString(1, lobj.getUname());
-		ps.setString(2,lobj.getPword());
-		ResultSet rs=ps.executeQuery();
-		if(rs.next()) {
-			isValid=true;
-		}
-		
-		
-	}catch(Exception e) {
-		System.out.println(e);
-	}
-	return isValid;
+    DBConnection dobj = new DBConnection();
+    
+    // Updated uLogin method
+    public boolean uLogin(Login lobj) { 
+        boolean isValid = false;
 
-	}
+        try {
+            String utype = lobj.getUsertype();
+            String query = null;
+            
+            if (utype.equals("user")) {
+                query = "SELECT email, password FROM c_register_table WHERE email = ? AND password = ?";
+            } else if (utype.equals("shopowner")) {
+                query = "SELECT owner_name, email, shop_id FROM s_register_table WHERE email = ? AND password = ?";
+            }
+
+            Connection con = dobj.Dbconnect();
+            PreparedStatement ps = con.prepareStatement(query);
+            ps.setString(1, lobj.getUname());
+            ps.setString(2, lobj.getPword());
+            ResultSet rs = ps.executeQuery();
+            
+            if (rs.next()) {
+                isValid = true;
+                if (utype.equals("shopowner")) {
+                    // Store the shop_id in the Login object for later use
+                    lobj.setShopId(rs.getInt("shop_id"));
+                }
+            }
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+        return isValid;
+    }
+
+    // New method to get shop_id by email for shop owner
+    public int getShopIdByEmail(String email) {
+        int shopId = -1;
+        try {
+            String query = "SELECT shop_id FROM s_register_table WHERE email = ?";
+            Connection con = dobj.Dbconnect();
+            PreparedStatement ps = con.prepareStatement(query);
+            ps.setString(1, email);
+            ResultSet rs = ps.executeQuery();
+            
+            if (rs.next()) {
+                shopId = rs.getInt("shop_id");
+            }
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+        return shopId;
+    }
 }
