@@ -21,7 +21,7 @@ public class LoginDao {
             if (utype.equals("user")) {
                 query = "SELECT email, password FROM c_register_table WHERE email = ? AND password = ?";
             } else if (utype.equals("shopowner")) {
-                query = "SELECT owner_name, email, shop_id FROM s_register_table WHERE email = ? AND password = ?";
+                query = "SELECT owner_name, email_id, shop_id FROM s_register_table WHERE owner_name = ? AND email_id = ?";
             }
 
             Connection con = dobj.Dbconnect();
@@ -47,7 +47,7 @@ public class LoginDao {
     public int getShopIdByEmail(String email) {
         int shopId = -1;
         try {
-            String query = "SELECT shop_id FROM s_register_table WHERE email = ?";
+            String query = "SELECT shop_id FROM s_register_table WHERE email_id = ?";
             Connection con = dobj.Dbconnect();
             PreparedStatement ps = con.prepareStatement(query);
             ps.setString(1, email);

@@ -47,7 +47,8 @@ public class LoginServlet extends HttpServlet {
                     // Use the shop_id that is now in the Login object
                     int shopId = lobj.getShopId(); // Get shop_id set by uLogin method
                     session.setAttribute("shop_id", shopId); // Store the shop ID in the session
-                    response.sendRedirect("ShopView.jsp");
+                    System.out.print(shopId);
+                    response.sendRedirect("Shopview.jsp");
                 }
             } else {
                 response.sendRedirect("login.jsp?error=invalid");
