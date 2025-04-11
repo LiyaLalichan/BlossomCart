@@ -85,11 +85,21 @@
   </div>
 </div>
 <div class="login-container">
-    <h2>Login to BlossomCart</h2>
+    <h2>Welcome Back to BlossomCart</h2>
     <form action="LoginServlet" method="post">
+
         <div class="mb-3">
-            <label for="email" class="form-label">Email address:</label>
-            <input type="email" class="form-control" id="email" name="email" placeholder="you@example.com" required>
+            <label for="role" class="form-label">Login As:</label>
+            <select class="form-select" id="role" name="role" required>
+                <option value="">-- Select Role --</option>
+                <option value="user">Customer</option>
+                <option value="shopowner">Shop Owner</option>
+            </select>
+        </div>
+
+        <div class="mb-3">
+            <label for="email" class="form-label">User Name:</label>
+            <input type="text" class="form-control" id="email" name="email" placeholder="" required>
         </div>
 
         <div class="mb-3">
@@ -99,13 +109,27 @@
         </div>
 
         <div class="text-center">
-    <button type="submit" class="btn btn-dark px-5">Login</button>
-</div>
+            <button type="submit" class="btn btn-dark px-5">Login</button>
+        </div>
+
         <div class="mt-3 text-center">
-            <p>Don't have an account? <a href="register.jsp">Register here</a></p>
+            <p>Don't have an account? <a href="#" id="registerLink">Register here</a></p>
         </div>
     </form>
-    </div>
+</div>
+  <script>
+    document.getElementById("registerLink").addEventListener("click", function(event) {
+        event.preventDefault(); 
+        var role = document.getElementById("role").value;
+        if (role === "user") {
+            window.location.href = "register.jsp"; 
+        } else if (role === "shopowner") {
+            window.location.href = "shopowner.jsp"; 
+        } else {
+            alert("Please select a role before registering.");
+        }
+    });
+</script>
     
 
 </body>
