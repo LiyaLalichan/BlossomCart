@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -38,14 +37,14 @@
     <div class="container-fluid d-flex justify-content-between align-items-center py-2 px-4 top-nav icon-group">
         <!-- Left side links -->
         <div class="d-flex">
-            <a href="About_Us.jsp" class="me-4 text-decoration-none text-dark">About</a>
-            <a href="Contact.jsp" class="me-4 text-decoration-none text-dark">Contact Us</a>
+            <a href="About_Us.html" class="me-4 text-decoration-none text-dark">About</a>
+            <a href="Contact.html" class="me-4 text-decoration-none text-dark">Contact Us</a>
            
         </div>
 
         <!-- Right side icon -->
         <div>
-           <a href="login.jsp" class="text-dark fs-5">
+           <a href="login.html" class="text-dark fs-5">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
             <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/><path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
             </svg></a>
@@ -64,15 +63,15 @@
 
 <div class="container main-nav">
    <div class="logo">
-      <a href="View.jsp"><img src="Image/PROJECT LOGO.png" alt="Logo" class="logo-img" ></a>
+      <a href="View.html"><img src="Image/PROJECT LOGO.png" alt="Logo" class="logo-img" ></a>
     </div>
    <div class="main-menu d-flex align-items-center gap-3">
 
   
-    <a href="Anniversary.jsp" class="nav-link">Anniversary</a>
-    <a href="Birthday.jsp" class="nav-link">BIRTHDAY FLOWERS</a>
-    <a href="Congrats.jsp" class="nav-link">Congratulations</a>
-    <a href="Love.jsp" class="nav-link">Love & Romance</a>
+    <a href="Anniversary.html" class="nav-link">Anniversary</a>
+    <a href="Birthday.html" class="nav-link">BIRTHDAY FLOWERS</a>
+    <a href="Congrats.html" class="nav-link">Congratulations</a>
+    <a href="Love.html" class="nav-link">Love & Romance</a>
 </div>
 
 </div>
