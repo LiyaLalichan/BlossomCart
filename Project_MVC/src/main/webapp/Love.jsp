@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,8 +14,8 @@
     <div class="container-fluid d-flex justify-content-between align-items-center py-2 px-4 top-nav icon-group">
         <!-- Left side links -->
         <div class="d-flex">
-            <a href="About_Us.jsp" class="me-4 text-decoration-none text-dark">About</a>
-            <a href="Contact.jsp" class="me-4 text-decoration-none text-dark">Contact Us</a>
+            <a href="About_Us.html" class="me-4 text-decoration-none text-dark">About</a>
+            <a href="Contact.html" class="me-4 text-decoration-none text-dark">Contact Us</a>
            
         </div>
 
@@ -41,13 +40,13 @@
 
 <div class="container main-nav">
    <div class="logo">
-      <a href="View.jsp"><img src="Image/PROJECT LOGO.png" alt="Logo" class="logo-img" ></a>
+      <a href="View.html"><img src="Image/PROJECT LOGO.png" alt="Logo" class="logo-img" ></a>
     </div>
    <div class="main-menu d-flex align-items-center gap-3">
-    <a href="Anniversary.jsp" class="nav-link">Anniversary</a>
-    <a href="Birthday.jsp" class="nav-link">BIRTHDAY FLOWERS</a>
-    <a href="Congrats.jsp" class="nav-link">Congratulations</a>
-    <a href="Love.jsp" class="nav-link">Love & Romance</a>
+    <a href="Anniversary.html" class="nav-link">Anniversary</a>
+    <a href="Birthday.html" class="nav-link">BIRTHDAY FLOWERS</a>
+    <a href="Congrats.html" class="nav-link">Congratulations</a>
+    <a href="Love.html" class="nav-link">Love & Romance</a>
 </div>
 
 </div>
@@ -88,11 +87,11 @@
     <div class="footer-col">
       <h4>Resources</h4>
       <ul>
-       <li><a href="About_Us.jsp">About Us</a></li>
-        <li><a href="Terms.jsp">Terms of service</a></li>
-        <li><a href="Refund.jsp">Refund Policy</a></li>
-        <li><a href="Privacy.jsp">Privacy Policy</a></li>
-        <li><a href="Contact.jsp">Contact Us</a></li>
+       <li><a href="About_Us.html">About Us</a></li>
+        <li><a href="Terms.html">Terms of service</a></li>
+        <li><a href="Refund.html">Refund Policy</a></li>
+        <li><a href="Privacy.html">Privacy Policy</a></li>
+        <li><a href="Contact.html">Contact Us</a></li>
       </ul>
     </div>
 
